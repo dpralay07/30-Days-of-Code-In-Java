@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int T = scan.nextInt();
+        String odd_index = "";
+        String even_index = "";
+        
+        for(int i=0;i<T;i++){
+            String test = scan.next();
+            char[] charArr = test.toCharArray();
+            for(int j=0;j<charArr.length;j++){
+                if(j%2 != 0)
+                    odd_index += charArr[j];
+                else
+                    even_index += charArr[j];
+            }
+            System.out.println(even_index+" "+odd_index);
+            odd_index = "";
+            even_index = "";
+        }
+    }
+}
