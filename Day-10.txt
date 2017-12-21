@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int total = 0;
+        int s = 0;
+        int remainder;
+        
+        while(n>0){
+            remainder = n%2;
+            n /= 2;
+            if(remainder==1){
+                s++;
+                if(s>=total)
+                   total = s;
+            }
+            else
+                s=0;       
+        }
+        System.out.println(total);
+}
+}
